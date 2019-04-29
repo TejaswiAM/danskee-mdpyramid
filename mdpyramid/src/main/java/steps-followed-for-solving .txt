@@ -1,0 +1,20 @@
+MD Pyramid problem
+
+Steps followed to get the solution:
+
+1)	Read input from a text file and convert it into 2 dimensional array dynamically
+
+2)	Construct Binary tree for each element of the last row of the array(Bottom-up approach)
+a.	Construct Binary tree if and only if the traversal is possible like eve->odd->even->odd 
+
+3)	Traverse each binary tree and store paths in integer array
+
+4)	Calculate Sum for a path and store it in a TreeMap<Key,Value>
+a.	Calculate sum for the paths if and only if paths size is same as no. of rows in our 2 dimensional array
+b.	Where ‘key’ is sum and ‘value’ is integer array with the path from root to leaf node 
+
+
+I would need little more time to come-up with efficient (time/space) solution and write Unit tests.
+
+Thanks,
+Sandeep
