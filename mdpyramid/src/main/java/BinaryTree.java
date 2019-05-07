@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class BinaryTree {
 
     Node root;
@@ -54,5 +56,14 @@ public class BinaryTree {
     public boolean isTraversable(int childNodeValue, int parentNodeValue) {
 
         return !(isEven(childNodeValue).equals(isEven(parentNodeValue)));
+    }
+
+    // Helper method for unit testing binary trees construction
+    public void inOrderTraversal(Node node, List<Integer> traversedPath) {
+        if (node == null)
+            return;
+        inOrderTraversal(node.left,traversedPath);
+        traversedPath.add(node.data);
+        inOrderTraversal(node.right,traversedPath);
     }
 }
